@@ -1,0 +1,17 @@
+import { url } from '../constants';
+
+
+////////////////////////////////////////////////////////////////////////////
+//////////////////////////// Fetch User ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+export const getUsers = () => {
+  const method = 'GET';
+  const request_url = `${url}/users`
+  const headers = {
+    'Content-Type': 'application/json',
+  }
+  
+  return fetch(request_url, { method, headers})
+    .then((res) => res.json());
+};
+
